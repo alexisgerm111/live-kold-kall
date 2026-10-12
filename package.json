@@ -1,0 +1,21 @@
+{
+  "name": "kold-kall-live-coaching",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "concurrently --kill-others --names server,agent \"node server.js\" \"node agent.js start\"",
+    "server": "node server.js",
+    "agent": "node agent.js start"
+  },
+  "dependencies": {
+    "@livekit/agents": "^1.0.0",
+    "@livekit/agents-plugin-deepgram": "^1.0.0",
+    "@livekit/agents-plugin-google": "^1.0.0",
+    "@livekit/agents-plugin-silero": "^1.0.0",
+    "@supabase/supabase-js": "^2.45.0",
+    "livekit-server-sdk": "^2.7.0",
+    "express": "^4.19.2",
+    "dotenv": "^16.4.5",
+    "concurrently": "^9.0.1"
+  }
+}
