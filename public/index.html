@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kold Kall — Live Coaching</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%233B6B50'/%3E%3Cpath d='M50 22a12 12 0 0 0-12 12v20a12 12 0 0 0 24 0V34a12 12 0 0 0-12-12z' fill='white'/%3E%3Cpath d='M74 48v4a24 24 0 0 1-48 0v-4' fill='none' stroke='white' stroke-width='6' stroke-linecap='round'/%3E%3Cline x1='50' y1='76' x2='50' y2='86' stroke='white' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="lc-login" id="lcLogin">
+  <div class="lc-login-card">
+    <div class="lc-login-logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+    </div>
+    <h1>Session expirée</h1>
+    <p>Retourne au dashboard Kold Kall pour lancer une nouvelle session de coaching.</p>
+    <a href="https://alexisgerm111.github.io/daqhboard-kold-kall/" class="lc-btn-primary">Retour au dashboard</a>
+  </div>
+</div>
+
+<div class="lc-app hidden" id="lcApp">
+  <header class="lc-nav">
+    <div class="lc-nav-brand">
+      <div class="lc-nav-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+      </div>
+      <span class="lc-nav-name">Kold Kall</span>
+      <span class="lc-nav-tag" id="lcModeTag">Live</span>
+    </div>
+    <div class="lc-nav-status">
+      <span class="lc-dot" id="lcDot"></span>
+      <span id="lcStatus">Connexion…</span>
+    </div>
+    <div class="lc-nav-right">
+      <div class="lc-timer" id="lcTimer">00:00</div>
+      <button class="lc-btn-end" id="lcEnd" disabled>Terminer</button>
+    </div>
+  </header>
+
+  <main class="lc-main" id="lcMain">
+    <section class="lc-script" id="lcScriptSection">
+      <div class="lc-section-head">
+        <span class="lc-section-title">Script / Prompteur</span>
+        <span class="lc-section-badge" id="lcScriptBadge">En attente</span>
+      </div>
+      <div class="lc-script-body" id="lcScriptBody">
+        <div class="lc-empty">Le script apparaîtra ici une fois la session démarrée.</div>
+      </div>
+    </section>
+
+    <aside class="lc-nudges" id="lcNudgesSection">
+      <div class="lc-section-head">
+        <span class="lc-section-title">Conseils live</span>
+        <span class="lc-section-badge" id="lcNudgeCount">0</span>
+      </div>
+      <div class="lc-nudge-list" id="lcNudgeList">
+        <div class="lc-empty">Le coach t'enverra des conseils ici dès qu'il détecte une opportunité.</div>
+      </div>
+    </aside>
+
+    <section class="lc-transcript">
+      <div class="lc-section-head">
+        <span class="lc-section-title">Transcription</span>
+        <span class="lc-section-badge" id="lcTranscriptBadge">0 lignes</span>
+      </div>
+      <div class="lc-transcript-body" id="lcTranscript">
+        <div class="lc-empty">La conversation transcrite apparaîtra ici.</div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
